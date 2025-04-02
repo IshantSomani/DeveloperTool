@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&display=swap');
+@import "tailwindcss";
+
+* {
+    font-family: "Cagliostro", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+@keyframes line-expand {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 3rem;
+        /* 48px */
+        opacity: 1;
+    }
+}
+
+@layer utilities {
+    .animate-line-expand {
+        animation: line-expand 0.8s ease-out 0.4s both;
+    }
+}
